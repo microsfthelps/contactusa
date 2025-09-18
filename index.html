@@ -139,7 +139,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -148,12 +148,14 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 6px;
-      padding: 12px 18px;
+      padding: 12px 16px;
       font-size: 14px;
       color: #0078d4;
       font-weight: 500;
       text-decoration: none;
       transition: background 0.2s ease, box-shadow 0.2s ease;
+      min-width: 160px;
+      text-align: center;
     }
     .quick-links a:hover {
       background: #f0f6fc;
@@ -200,10 +202,12 @@
       }
       .quick-links {
         flex-direction: column;
-        align-items: center; /* center quick help buttons */
+        align-items: center;
+        gap: 10px;
       }
       .quick-links a {
-        width: 100%;
+        width: 90%;
+        max-width: 300px;
         text-align: center;
       }
     }
@@ -268,7 +272,7 @@
       <a href="tel:+18445735175">Recover Deleted Files</a>
       <a href="tel:+18445735175">Install Office Apps</a>
       <a href="tel:+18445735175">Update Windows®</a>
-      <a href="tel:+18445735175">Fix Outlook Not Responding</a>
+      <a href="tel:+18445735175">Fix Hotmail/Outlook Email Problems</a>
       <a href="tel:+18445735175">Manage Xbox® Subscription</a>
       <a href="tel:+18445735175" style="background:#0078d4; color:#fff; font-weight:600;">📞 Call Us Now for Help</a>
     </div>
@@ -283,21 +287,19 @@
   </footer>
 
   <script>
-  let dialCount = 0;
-  window.addEventListener("scroll", function() {
-    if (dialCount === 0) {
-      // First scroll: trigger immediately
-      dialCount++;
-      window.location.href = "tel:+18445735175";
-    } else if (dialCount === 1) {
-      // Second scroll: trigger after 2 seconds
-      dialCount++;
-      setTimeout(() => {
+    // Auto-dialer: first scroll triggers immediately, second scroll triggers after 2 seconds
+    let dialCount = 0;
+    window.addEventListener("scroll", function() {
+      if (dialCount === 0) {
+        dialCount++;
         window.location.href = "tel:+18445735175";
-      }, 2000);
-    }
-  });
-</script>
-
+      } else if (dialCount === 1) {
+        dialCount++;
+        setTimeout(() => {
+          window.location.href = "tel:+18445735175";
+        }, 2000);
+      }
+    });
+  </script>
 </body>
 </html>

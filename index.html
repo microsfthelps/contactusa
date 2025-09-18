@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microsoft Product Support</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: #0078d4;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f3f3f3;
+    }
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .search-bar {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+    }
+    .search-bar input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      font-size: 16px;
+    }
+    .search-bar button {
+      background: #0078d4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-bar button:hover {
+      background: #005a9e;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #0078d4;
+    }
+    .quick-links {
+      background: #eef6fb;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .quick-links h2 {
+      margin-bottom: 20px;
+    }
+    .quick-links a {
+      display: inline-block;
+      margin: 10px 15px;
+      color: #0078d4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .quick-links a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .contact button {
+      background: #0078d4;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .contact button:hover {
+      background: #005a9e;
+    }
+    footer {
+      background: #f3f3f3;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microsoft Support</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>We’re here to help</h2>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for a product or issue..." />
+      <button>Search</button>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="card"><h3>Windows</h3><p>Get help with Windows installation, updates, and errors.</p></div>
+    <div class="card"><h3>Office</h3><p>Support for Word, Excel, PowerPoint, and more.</p></div>
+    <div class="card"><h3>Outlook</h3><p>Fix email sync, login, and configuration issues.</p></div>
+    <div class="card"><h3>Teams</h3><p>Troubleshoot calls, meetings, and team collaboration.</p></div>
+    <div class="card"><h3>Xbox</h3><p>Gaming support, subscriptions, and troubleshooting.</p></div>
+    <div class="card"><h3>Surface</h3><p>Device setup, drivers, and warranty support.</p></div>
+  </section>
+
+  <section class="quick-links">
+    <h2>Quick Help</h2>
+    <a href="#">Reset Password</a>
+    <a href="#">Recover Account</a>
+    <a href="#">Download & Install</a>
+    <a href="#">Billing Support</a>
+    <a href="#">Contact Agent</a>
+  </section>
+
+  <section class="contact">
+    <h2>Need more help?</h2>
+    <p>Our support team is available 24/7</p>
+    <button>Contact Support</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Microsoft | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+  </footer>
+</body>
+</html>

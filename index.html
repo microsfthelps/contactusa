@@ -27,18 +27,6 @@
       height: 32px;
       margin-right: 10px;
     }
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-      font-weight: 500;
-    }
     .call-btn {
       background: #0078d4;
       color: #fff;
@@ -54,7 +42,7 @@
     }
     main {
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px 40px;
       background: linear-gradient(120deg, #5b2be0, #0078d4);
       color: white;
     }
@@ -83,6 +71,36 @@
       border-radius: 0 4px 4px 0;
       cursor: pointer;
     }
+    .categories {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .category {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      text-align: left;
+      transition: transform 0.2s ease;
+    }
+    .category:hover {
+      transform: translateY(-3px);
+      border-color: #0078d4;
+    }
+    .category h3 {
+      margin-top: 0;
+      color: #0078d4;
+      font-size: 18px;
+    }
+    .category p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 10px 0 0;
+    }
     footer {
       background: #f4f4f4;
       text-align: center;
@@ -99,16 +117,6 @@
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-    }
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .call-btn {
-        margin-top: 10px;
-        align-self: flex-start;
-      }
     }
   </style>
 </head>
@@ -128,6 +136,41 @@
       <button>→</button>
     </div>
   </main>
+
+  <section class="categories">
+    <div class="category">
+      <h3>Microsoft 365</h3>
+      <p>Help with installation, subscription, Outlook, Word, Excel, PowerPoint, and other Office apps.</p>
+    </div>
+    <div class="category">
+      <h3>Windows</h3>
+      <p>Assistance with Windows installation, updates, activation, and troubleshooting performance issues.</p>
+    </div>
+    <div class="category">
+      <h3>OneDrive</h3>
+      <p>Support for file backup, syncing issues, storage plans, and recovering lost or deleted files.</p>
+    </div>
+    <div class="category">
+      <h3>Microsoft Teams</h3>
+      <p>Setup, account login, calling, meetings, and resolving connectivity or usage issues.</p>
+    </div>
+    <div class="category">
+      <h3>Surface Devices</h3>
+      <p>Help with Surface laptops, tablets, drivers, hardware performance, and warranty-related guidance.</p>
+    </div>
+    <div class="category">
+      <h3>Xbox & Gaming</h3>
+      <p>Assistance with Xbox setup, subscriptions, online services, and account troubleshooting.</p>
+    </div>
+    <div class="category">
+      <h3>Microsoft Store</h3>
+      <p>Issues with app installations, purchases, subscriptions, and refunds in the Microsoft Store.</p>
+    </div>
+    <div class="category">
+      <h3>IT Support Services</h3>
+      <p>General troubleshooting, software setup, connectivity issues, and account recovery across Microsoft products.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Microsoft | <a href="#">Privacy</a> | <a href="#">Terms</a></p>

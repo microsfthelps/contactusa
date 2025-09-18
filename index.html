@@ -3,298 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Microsoft Product Support</title>
+  <title>Microsoft Product IT Support</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Segoe UI, Arial, sans-serif;
       color: #333;
-      background-color: #f9f9f9;
     }
-
-    /* ===== HEADER ===== */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 30px;
-      border-bottom: 1px solid #ddd;
       background: #fff;
-    }
-
-    .header-left {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 40px;
       display: flex;
       align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      height: 24px;
-    }
-
-    .support {
-      font-weight: 600;
-      font-size: 16px;
-      margin-right: 15px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
-
-    .btn {
-      border: 1px solid #000;
-      padding: 6px 12px;
-      border-radius: 3px;
-      font-size: 13px;
-      text-decoration: none;
-      color: #000;
-      background: #fff;
-    }
-
-    .btn:hover {
-      background: #f3f3f3;
-    }
-
-    .tollfree {
-      font-size: 15px;
-      color: #0078d4;
-      font-weight: bold;
-    }
-
-    .user-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #f3f3f3;
+    .logo {
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 14px;
     }
-
-    /* ===== HERO ===== */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(90deg, #6a5acd, #1e90ff);
-      color: white;
+    .logo img {
+      height: 32px;
+      margin-right: 10px;
     }
-
-    .hero h2 {
-      font-size: 32px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .search-bar {
-      max-width: 600px;
-      margin: 0 auto;
+    nav {
       display: flex;
-      background: white;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid #ccc;
-    }
-
-    .search-bar input {
-      flex: 1;
-      padding: 12px;
-      border: none;
-      font-size: 16px;
-    }
-
-    .search-bar button {
-      background: white;
-      border: none;
-      padding: 0 20px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #0078d4;
-    }
-
-    /* ===== CATEGORIES ===== */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 40px;
-      max-width: 1100px;
-      margin: auto;
+      align-items: center;
+      flex-wrap: wrap;
     }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      color: #0078d4;
-    }
-
-    /* ===== QUICK LINKS ===== */
-    .quick-links {
-      background: #eef6fb;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .quick-links h2 {
-      margin-bottom: 20px;
-    }
-
-    .quick-links a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: #0078d4;
+    nav a {
       text-decoration: none;
+      color: #333;
+      font-size: 14px;
       font-weight: 500;
     }
-
-    .quick-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .contact button {
+    .call-btn {
       background: #0078d4;
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s ease;
     }
-
-    .contact button:hover {
+    .call-btn:hover {
       background: #005a9e;
     }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #f3f3f3;
-      padding: 20px 40px;
+    main {
       text-align: center;
-      font-size: 14px;
-      color: #666;
+      padding: 80px 20px;
+      background: linear-gradient(120deg, #5b2be0, #0078d4);
+      color: white;
     }
-
-    footer p {
-      margin: 6px 0;
+    main h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
-
-    footer .disclaimer {
+    main .search-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    main input[type="text"] {
+      padding: 12px;
+      width: 300px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+    main button {
+      padding: 12px 20px;
+      border: none;
+      background: #fff;
+      color: #0078d4;
+      font-weight: bold;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    footer {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
       font-size: 12px;
-      color: #999;
-      margin-top: 10px;
-      line-height: 1.4;
+      color: #555;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
     }
-
-    @media (max-width: 768px) {
+    .disclaimer {
+      font-size: 11px;
+      color: #777;
+      margin-top: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 700px) {
       header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
       }
-      .header-left, .header-right {
-        flex-wrap: wrap;
-        justify-content: center;
+      nav {
+        margin-top: 10px;
       }
-      .tollfree {
-        margin-top: 5px;
+      .call-btn {
+        margin-top: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
   <header>
-    <div class="header-left">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="logo" />
-      <span class="support">Support</span>
-      <nav>
-        <a href="#">Microsoft 365</a>
-        <a href="#">Office</a>
-        <a href="#">Products</a>
-        <a href="#">Devices</a>
-        <a href="#">Account &amp; billing</a>
-        <a href="#">Resources</a>
-      </nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+      <strong>Support</strong>
     </div>
-
-    <div class="header-right">
-      <a href="#" class="btn">Try Copilot Chat</a>
-      <a href="#">All Microsoft ▾</a>
-      <a href="#">Search 🔍</a>
-      <span class="tollfree"><strong>+1 (844) 573-5175</strong></span>
-      <div class="user-icon">◉</div>
-    </div>
+    <nav>
+      <a href="#">Microsoft 365</a>
+      <a href="#">Office</a>
+      <a href="#">Products</a>
+      <a href="#">Devices</a>
+      <a href="#">Account & Billing</a>
+      <a href="#">Resources</a>
+      <a href="#">All Microsoft</a>
+      <a href="#" class="call-btn" href="tel:+18445735175">📞 +1 (844) 573-5175</a>
+    </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <h2>Hello, +1 (844) 573-5175, welcome to Microsoft Support</h2>
-    <div class="search-bar">
+  <main>
+    <h1>Hello, welcome to Microsoft Support</h1>
+    <div class="search-box">
       <input type="text" placeholder="How can we help you?" />
       <button>→</button>
     </div>
-  </section>
+  </main>
 
-  <!-- ===== CATEGORIES ===== -->
-  <section class="categories">
-    <div class="card"><h3>Windows</h3><p>Get help with Windows installation, updates, and errors.</p></div>
-    <div class="card"><h3>Office</h3><p>Support for Word, Excel, PowerPoint, and more.</p></div>
-    <div class="card"><h3>Outlook</h3><p>Fix email sync, login, and configuration issues.</p></div>
-    <div class="card"><h3>Teams</h3><p>Troubleshoot calls, meetings, and team collaboration.</p></div>
-    <div class="card"><h3>Xbox</h3><p>Gaming support, subscriptions, and troubleshooting.</p></div>
-    <div class="card"><h3>Surface</h3><p>Device setup, drivers, and warranty support.</p></div>
-  </section>
-
-  <!-- ===== QUICK LINKS ===== -->
-  <section class="quick-links">
-    <h2>Quick Help</h2>
-    <a href="#">Reset Password</a>
-    <a href="#">Recover Account</a>
-    <a href="#">Download & Install</a>
-    <a href="#">Billing Support</a>
-    <a href="#">Contact Agent</a>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="contact">
-    <h2>Need more help?</h2>
-    <p>Our support team is available 24/7</p>
-    <button>Contact Support</button>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; 2025 Microsoft | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
     <p class="disclaimer">

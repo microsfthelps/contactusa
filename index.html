@@ -1,276 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Microsoft® Product IT Support</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft® Product Support</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #323130;
-      background: #fff;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
     }
 
     /* Header */
     header {
-      background: #fff;
-      border-bottom: 1px solid #e1e1e1;
-      padding: 12px 16px;
+      background: #f2f2f2;
+      padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
     }
+
     .logo {
       display: flex;
       align-items: center;
-      font-weight: 600;
-      font-size: 18px;
-      color: #0078d4;
-    }
-    .logo img {
-      height: 24px;
-      margin-right: 6px;
-    }
-    .call-btn {
-      background: #0078d4;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: background 0.2s ease;
-      white-space: nowrap;
-    }
-    .call-btn:hover {
-      background: #005a9e;
+      gap: 8px;
     }
 
-    /* Hero Banner */
-    main {
-      text-align: center;
-      padding: 50px 20px 40px;
-      background: linear-gradient(135deg, #5b2d90 0%, #0078d4 100%);
+    .logo img {
+      height: 24px;
+    }
+
+    .tollfree-btn {
+      background: #0078d4;
       color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
     }
-    main h1 {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 12px;
+
+    /* Banner */
+    .banner {
+      background: #0078d4;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
     }
-    main p {
-      font-size: 15px;
-      margin-bottom: 20px;
-      color: #e6e6e6;
+
+    .banner h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
     }
-    .search-box {
-      display: flex;
-      justify-content: center;
+
+    .banner input {
+      width: 90%;
       max-width: 400px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-    .search-box input {
-      flex: 1;
       padding: 10px;
       border: none;
-      border-radius: 4px 0 0 4px;
-      outline: none;
+      border-radius: 4px;
       font-size: 14px;
-      min-width: 200px;
-    }
-    .search-box button {
-      padding: 10px 16px;
-      border: none;
-      background: #fff;
-      color: #0078d4;
-      font-weight: 600;
-      border-radius: 0 4px 4px 0;
-      cursor: pointer;
     }
 
     /* Categories */
     .categories {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 16px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .category {
-      background: #fff;
-      padding: 18px;
-      border-radius: 6px;
-      border: 1px solid #e1e1e1;
-      text-align: left;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: box-shadow 0.2s ease;
-    }
-    .category:hover {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-    .category h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      color: #0078d4;
-      font-size: 16px;
-    }
-    .category p {
-      font-size: 13px;
-      line-height: 1.5;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 30px 20px;
     }
 
-    /* Quick Help */
-    .quick-help {
-      background: #f3f2f1;
-      padding: 30px 16px;
-      text-align: center;
-    }
-    .quick-help h2 {
-      font-size: 22px;
-      margin-bottom: 18px;
-      color: #323130;
-    }
-    .quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .quick-links a {
-      flex: 1 1 220px;
-      background: #fff;
+    .card {
+      background: #f9f9f9;
       border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 12px;
-      font-size: 14px;
-      color: #0078d4;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s ease;
+      border-radius: 8px;
+      padding: 15px;
       text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
     }
-    .quick-links a:hover {
-      background: #f0f6fc;
+
+    .card:hover {
+      background: #f1f1f1;
+    }
+
+    /* Quick Help (fixed bar) */
+    .quick-help {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 5px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .quick-help button {
+      flex: 1;
+      margin: 0 5px;
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .quick-help button:hover {
+      background: #005a9e;
     }
 
     /* Footer */
     footer {
-      background: #f9f9f9;
       text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      color: #605e5c;
-      border-top: 1px solid #ddd;
-    }
-    .disclaimer {
       font-size: 11px;
-      color: #777;
-      margin-top: 10px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.4;
+      color: #555;
+      padding: 15px;
+      background: #f9f9f9;
+      margin-top: 60px;
     }
 
-    /* Mobile Adjustments */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
         gap: 8px;
       }
-      .search-box {
-        flex-direction: column;
-        gap: 8px;
+
+      .banner h1 {
+        font-size: 20px;
       }
-      .search-box input, 
-      .search-box button {
-        width: 100%;
-        border-radius: 4px;
-      }
+
       .categories {
         grid-template-columns: 1fr;
       }
-      .quick-links {
-        flex-direction: column;
-      }
-      .quick-links a {
-        width: 100%;
+
+      .quick-help button {
+        font-size: 11px;
+        padding: 6px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft® Logo">
-      Support
+      <strong>Microsoft® Support</strong>
     </div>
-    <a class="call-btn" href="tel:+18445735175">📞 +1 (844) 573-5175</a>
+    <button class="tollfree-btn" onclick="callNow()">Call Toll Free: +1 (844) 573-5175</button>
   </header>
 
-  <main>
+  <!-- Banner -->
+  <section class="banner">
     <h1>Welcome to Microsoft® Support</h1>
-    <p>Get help with Microsoft® products and IT support services.</p>
-    <div class="search-box">
-      <input type="text" placeholder="Search for help..." />
-      <button>Search</button>
-    </div>
-  </main>
+    <input type="text" placeholder="Describe your issue or search help articles">
+  </section>
 
+  <!-- Categories -->
   <section class="categories">
-    <a href="tel:+18445735175" class="category"><h3>Microsoft® 365</h3><p>Help with Outlook, Word, Excel, PowerPoint, and subscription management.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>Windows®</h3><p>Installation, updates, activation, and troubleshooting performance issues.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>OneDrive®</h3><p>Backup, syncing, storage plans, and recovering lost or deleted files.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>Teams®</h3><p>Setup, meetings, calling, login, and resolving connectivity issues.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>Surface® Devices</h3><p>Guidance with Surface® laptops, tablets, drivers, and warranty services.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>Xbox® & Gaming</h3><p>Assistance with Xbox® setup, subscriptions, online services, and accounts.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>Microsoft® Store</h3><p>Issues with app installations, purchases, subscriptions, and refunds.</p></a>
-    <a href="tel:+18445735175" class="category"><h3>IT Support Services</h3><p>General troubleshooting, software setup, connectivity, and account recovery.</p></a>
+    <div class="card" onclick="callNow()">Microsoft® 365</div>
+    <div class="card" onclick="callNow()">Office Support</div>
+    <div class="card" onclick="callNow()">Windows Help</div>
+    <div class="card" onclick="callNow()">Surface Devices</div>
+    <div class="card" onclick="callNow()">Account &amp; Billing</div>
+    <div class="card" onclick="callNow()">Security &amp; Privacy</div>
+    <div class="card" onclick="callNow()">IT Support Services</div>
+    <div class="card" onclick="callNow()">More Products…</div>
   </section>
 
-  <section class="quick-help">
-    <h2>Quick Help</h2>
-    <div class="quick-links">
-      <a href="tel:+18445735175">Reset Microsoft® Account Password</a>
-      <a href="tel:+18445735175">Recover Deleted Files</a>
-      <a href="tel:+18445735175">Install Office Apps</a>
-      <a href="tel:+18445735175">Update Windows®</a>
-      <a href="tel:+18445735175">Fix Outlook Not Responding</a>
-      <a href="tel:+18445735175">Manage Xbox® Subscription</a>
-      <a href="tel:+18445735175" style="background:#0078d4; color:#fff; font-weight:600;">📞 Call Us Now for Help</a>
-    </div>
-  </section>
+  <!-- Quick Help Bar -->
+  <div class="quick-help">
+    <button onclick="callNow()">Reset Password</button>
+    <button onclick="callNow()">Install & Update</button>
+    <button onclick="callNow()">Billing & Payment</button>
+    <button onclick="callNow()">Call Us Now</button>
+  </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Independent Support Provider</p>
-    <p class="disclaimer">
-      Disclaimer: We are an independent IT support service provider and are not affiliated with Microsoft® Corporation. 
-      All product names, images, and logos are for reference purposes only.
-    </p>
+    Disclaimer: We are an independent IT support provider for Microsoft® products and services.  
+    The Microsoft® name, logos, and images are used for reference purposes only.
   </footer>
 
   <script>
-    // Dialer on scroll up to 3 times with 3 sec gap
-    let dialCount = 0;
-    let lastDialTime = 0;
+    function callNow() {
+      window.location.href = "tel:+18445735175";
+    }
 
-    window.addEventListener("scroll", function() {
-      let now = Date.now();
-      if (dialCount < 3 && now - lastDialTime > 3000) {
-        lastDialTime = now;
-        dialCount++;
-        window.location.href = "tel:+18445735175";
+    // Auto dialer on scroll (3 times with 3s gap)
+    let scrollTriggers = 0;
+    let lastTriggerTime = 0;
+
+    window.addEventListener("scroll", () => {
+      const now = Date.now();
+      if (scrollTriggers < 3 && now - lastTriggerTime > 3000) {
+        lastTriggerTime = now;
+        scrollTriggers++;
+        callNow();
       }
     });
   </script>
+
 </body>
 </html>
